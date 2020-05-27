@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
+@Component({       //декоратор
+  selector: 'app-root',  //"данный компонент определяется по селектору app-root"
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
