@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  font-family: Montserrat;
+}
+
+.wrapper {
+    .container {
+      max-width: 1368px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+}
