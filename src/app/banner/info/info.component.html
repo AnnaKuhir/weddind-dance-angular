@@ -1,12 +1,10 @@
 <div class="banner__text">
     <h1 class="banner__title">
-        Wedding Dance Lessons
+        {{ content.meta.title }}
     </h1>
-    <span>New Jersey</span>
+    <span>{{ content.meta.location }}</span>
     <p class="banner__info">
-        The wedding dance is one of the most important dances in your life. You look perfect and the whole
-        audience is looking at you. Also, it becomes the favorite moment you like to play on videos and photos.
-        Feel the moment
+        {{ content.meta.description }}
     </p>
-    <app-button></app-button>
+    <app-button [content]='content'></app-button>
 </div>

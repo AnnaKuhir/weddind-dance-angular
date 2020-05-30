@@ -1,8 +1,8 @@
 <div class="container">
-    <section class="banner">
-        <app-info></app-info>
+    <section class="banner" *ngIf="content">
+        <app-info [content]='content'></app-info>
         <div class="banner_presentation">
-            <app-image></app-image>
+            <app-image [content]='content'></app-image>
         </div>
     </section>
 </div>

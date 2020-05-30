@@ -1,6 +1,8 @@
 .banner__text {
     max-width: 428px;
     padding: 73px 77px 80px 0;
+    position: absolute;
+    background: #fff;
 
     .banner__title {
         font-style: normal;
@@ -25,4 +27,5 @@
         margin: 40px 0;
         line-height: 1.5;
     }
+
 }

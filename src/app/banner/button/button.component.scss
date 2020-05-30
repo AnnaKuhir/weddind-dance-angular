@@ -1,14 +1,14 @@
 // @import  "../../../assets/variables/variables.scss";
 .banner__btn {
-    border: 2px solid #ff699f;
-    color: #ff699f;
-    padding: 11px 40px 10px;
+  border: 2px solid #ff699f;
+  color: #ff699f;
+  padding: 11px 40px 10px;
 
-    &:hover {
-      background-color: #ff699f;
-      color: #fff;
-      transition: 0.5s;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-    }
+
+  &:hover {
+    background-color: #ff699f;
+    color: #fff;
+    transition: 0.5s;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
+}

@@ -21,6 +21,12 @@
   font-style: normal;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -36,6 +42,7 @@ body {
 }
 
 .btn {
+  font-family: Montserrat-Normal;
   display: inline-block;
   vertical-align: top;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -45,4 +52,5 @@ body {
   border-radius: 3px;
   background-color: #fff;
   outline: none;
+  cursor: pointer;
 }

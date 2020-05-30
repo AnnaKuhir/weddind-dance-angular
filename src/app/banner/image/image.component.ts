@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Content } from 'src/app/models/section.model';
 
 @Component({
   selector: 'app-image',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageComponent implements OnInit {
 
+  @Input() content: Content;
   constructor() { }
 
+  public imgUrl: string;
+
   ngOnInit(): void {
+    this.imgUrl = `../../../assets/images${this.content.meta.heroImage}`;
   }
 
 }
