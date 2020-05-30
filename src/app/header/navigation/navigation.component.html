@@ -1,19 +1,7 @@
 <nav class="header__menu">
   <ul class="header__list">
-    <li>
-      <a href="#" class="header__link">Services</a>
-    </li>
-    <li>
-      <a href="#" class="header__link">Our Coaches</a>
-    </li>
-    <li>
-      <a href="#" class="header__link">Testimonials</a>
-    </li>
-    <li>
-      <a href="#" class="header__link">FAQ</a>
-    </li>
-    <li>
-      <a href="#" class="header__link">Lesson Review</a>
+    <li *ngFor="let link of links">
+      <a [href]="link.url" class="header__link">{{ link.title }}</a>
     </li>
   </ul>
 </nav>
