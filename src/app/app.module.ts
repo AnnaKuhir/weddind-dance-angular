@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 import { BannerModule } from './banner/banner.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ServicesModule } from './services/services.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderModule,
     BannerModule,
     HttpClientModule,
+    ServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]  //запуск компонента 
