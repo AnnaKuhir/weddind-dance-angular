@@ -10,6 +10,7 @@
         justify-content: space-between;
         height: 72px;
         align-items: center;
+        background: #fff;
     }
 
     .header__logo {
@@ -26,21 +27,12 @@
     .header__navigation {
         display: flex;
         align-items: center;
-        .header__button {
-            display: inline-block;
-            vertical-align: top;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
+        .header__btn {
             border: 2px solid #000;
             color: #000;
             box-sizing: border-box;
-            border-radius: 3px;
             padding: 6px 33px;
-            background-color: #fff;
             margin-left: 23px;
-            outline: none;
 
             &:hover {
                 color: #fff;

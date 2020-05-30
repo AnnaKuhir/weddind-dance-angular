@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
+import { BannerModule } from './banner/banner.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { HeaderModule } from './header/header.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HeaderModule
+    HeaderModule,
+    BannerModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]  //запуск компонента 

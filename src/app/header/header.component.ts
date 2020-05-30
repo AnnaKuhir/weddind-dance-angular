@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HeaderService } from './services/header-service';
 
 @Component(
   {
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
     styleUrls: ['./header.component.scss']
   }
 )
-export class HeaderComponent{
-  constructor() { }
+export class HeaderComponent implements OnInit {
+
+  constructor(private headerService: HeaderService) { }
+
+  ngOnInit(): void {
+    this.headerService.getSection().subscribe(sections => {
+      console.log(sections);
+    });
+
+  }
 }
