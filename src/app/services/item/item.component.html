@@ -9,11 +9,8 @@
         {{cardItem.title}}
       </h3>
       <ul class="services__list">
-        <li class="services__items">
-          First Dance
-        </li>
-        <li class="services__items">
-          Parent & Child Dance
+        <li class="services__items" *ngFor="let list of cardItem.style">
+          {{list}}
         </li>
       </ul>
     </div>

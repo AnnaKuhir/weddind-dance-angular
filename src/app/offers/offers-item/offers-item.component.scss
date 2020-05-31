@@ -1,0 +1,31 @@
+.offers__main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.offers__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(25% - 30px);
+  cursor: pointer;
+}
+
+.offers__ico {
+  font-size: 60px;
+  color: #FF699F;
+  margin-bottom: 14px;
+}
+
+
+span {
+  font-family: Montserrat-Normal;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5rem;
+  max-width: 70%;
+}

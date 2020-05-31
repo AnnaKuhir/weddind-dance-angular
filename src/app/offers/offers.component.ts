@@ -11,17 +11,20 @@ import { AppService } from '../service/app-service';
 )
 export class OffersComponent implements OnInit {
 
-  // @Output() links: InnerContent [];
+  @Output() items: InnerContent [];
   public content: Content;
 
-  constructor(private appService: AppService) { }
-  ngOnInit(): void {
-    this.appService.getSection().subscribe((sections: Section) => {
-      if (sections) {
-        this.content = sections.content[3];
-        // this.links = this.content.content;
-      }
-    });
+constructor(private appService: AppService) { }
 
-  }
+ngOnInit(): void {
+  this.appService.getSection().subscribe((sections: Section) => {
+    if (sections) {
+      this.content = sections.content[3];
+      this.items = this.content.content;
+    }
+  });
+
+
+
+}
 }

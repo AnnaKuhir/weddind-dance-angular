@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ServicesModule } from './services/services.module';
 import { FooterComponent } from './footer/footer.component';
 import { OffersModule } from './offers/offers.module';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { OffersModule } from './offers/offers.module';
     BannerModule,
     HttpClientModule,
     ServicesModule,
-    OffersModule
+    OffersModule,
+    AngularSvgIconModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]  //запуск компонента 
