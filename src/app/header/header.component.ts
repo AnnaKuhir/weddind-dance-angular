@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { HeaderService } from './services/header-service';
 import { Section, Content, InnerContent } from '../models/section.model';
+import { AppService } from '../service/app-service';
 
 @Component(
   {
@@ -14,10 +14,9 @@ export class HeaderComponent implements OnInit {
   @Output() links: InnerContent [];
   public content: Content;
 
-  constructor(private headerService: HeaderService) { }
-
+  constructor(private appService: AppService) { }
   ngOnInit(): void {
-    this.headerService.getSection().subscribe((sections: Section) => {
+    this.appService.getSection().subscribe((sections: Section) => {
       if (sections) {
         this.content = sections.content[4];
         this.links = this.content.content;
