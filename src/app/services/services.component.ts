@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { Section, Content } from '../models/section.model';
+import { Section, Content, InnerContent } from '../models/section.model';
 import { AppService } from '../service/app-service';
 
 @Component(
@@ -10,7 +10,8 @@ import { AppService } from '../service/app-service';
     }
 )
 export class ServicesComponent implements OnInit {
-    @Output() content: Content;
+    @Output() items: InnerContent [];
+    public content: Content;
 
   constructor(private appService: AppService) { }
 
@@ -18,6 +19,7 @@ export class ServicesComponent implements OnInit {
     this.appService.getSection().subscribe((sections: Section) => {
       if (sections) {
         this.content = sections.content[0];
+        this.items = this.content.content;
       }
     });
 

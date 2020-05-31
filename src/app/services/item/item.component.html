@@ -1,1 +1,22 @@
-<p>item works!</p>
+<div class="services__slider">
+  <div class="services__card" *ngFor="let cardItem of cardItems" (click)="handleClick(cardItem, $event)">
+
+    <img [src]="cardItem.imageUrl" class="services__image" alt="First dance image">
+
+
+    <div class="services__info" >
+      <h3 class="services__subtitle">
+        {{cardItem.title}}
+      </h3>
+      <ul class="services__list">
+        <li class="services__items">
+          First Dance
+        </li>
+        <li class="services__items">
+          Parent & Child Dance
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
