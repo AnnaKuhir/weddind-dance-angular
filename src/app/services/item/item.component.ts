@@ -38,8 +38,6 @@ export class ItemComponent implements OnInit {
         cardItem.url = item.url;
       }
     })
-
-
   }
 
   handleClick(cardItem: CardItem, event: Event){
@@ -48,8 +46,6 @@ export class ItemComponent implements OnInit {
       location.href = cardItem.url;
     }
   }
-
-
 }
 
 interface CardItem {

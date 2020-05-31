@@ -1,6 +1,12 @@
-<div class="wrapper">
-    <app-header></app-header>
-    <app-banner></app-banner>
-    <app-services></app-services>
-    <app-footer></app-footer>
-</div>
+<ng-container *ngIf="loading" >
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</ng-container>
+<ng-container *ngIf="!loading">
+  
+    <div class="wrapper">
+        <app-header></app-header>
+        <app-banner></app-banner>
+        <app-services></app-services>
+        <app-footer></app-footer>
+    </div>
+</ng-container>

@@ -8,6 +8,7 @@ import { BannerModule } from './banner/banner.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ServicesModule } from './services/services.module';
 import { FooterComponent } from './footer/footer.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderModule,
     BannerModule,
     HttpClientModule,
-    ServicesModule
+    ServicesModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]  //запуск компонента 
