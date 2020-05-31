@@ -7,18 +7,22 @@ import { InnerContent } from 'src/app/models/section.model';
   styleUrls: ['./offers-item.component.scss'],
 })
 export class OffersItemComponent implements OnInit {
-  @Input() items: InnerContent[];
+  @Input() item: InnerContent;
   constructor() {}
 
-  public baseImgUrl: string;
+  public imgUrl: string;
 
   ngOnInit(): void {
-    this.baseImgUrl = '../../../assets/images/';
+    // debugger;
+    if(this.item) {
+      const imageName = this.item.title.replace(/[ ,.]/g, "-").toLocaleLowerCase();
+      this.imgUrl = `../../../assets/images/${imageName}.svg`;
+    }
   }
 
-  handleClick(cardItem: InnerContent, event: Event) {
-    if (cardItem) {
-      location.href = cardItem.url;
+  handleClick() {
+    if (this.item) {
+      location.href = this.item.url;
     }
   }
 }

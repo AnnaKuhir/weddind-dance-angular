@@ -1,15 +1,7 @@
-.offers__main {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .offers__item {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: calc(25% - 30px);
   cursor: pointer;
 }
 

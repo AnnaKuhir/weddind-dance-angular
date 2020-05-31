@@ -7,7 +7,8 @@
     <p class="offers__description">
       {{content.meta.description}}
     </p>
-
-    <app-offers-item [items]="items"></app-offers-item>
-    </section>
+    <div class="offers__main">
+      <app-offers-item *ngFor="let item of items" [item]="item"></app-offers-item>
+    </div>
+  </section>
 </div>

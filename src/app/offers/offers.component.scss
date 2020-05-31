@@ -16,4 +16,10 @@
     line-height: 1.5;
     margin-bottom: 48px;
   }
+  .offers__main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }

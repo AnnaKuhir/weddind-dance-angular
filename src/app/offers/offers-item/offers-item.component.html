@@ -1,6 +1,4 @@
-<div class="offers__main">
-  <div class="offers__item" *ngFor="let item of items" (click)="handleClick(item, $event)">
-    <svg-icon [src]="baseImgUrl + item._id + '.svg'" [svgStyle]="{ 'width.px':92 }" class="offers__ico"></svg-icon>
-    <span>{{item.title}}</span>
-  </div>
+<div class="offers__item" (click)="handleClick()">
+  <svg-icon [src]="imgUrl" [svgStyle]="{ 'width.px':92 }" class="offers__ico"></svg-icon>
+  <span>{{item.title}}</span>
 </div>

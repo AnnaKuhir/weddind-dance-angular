@@ -5,44 +5,42 @@ import { strict } from 'assert';
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
-  styleUrls: ['./item.component.scss']
+  styleUrls: ['./item.component.scss'],
 })
 export class ItemComponent implements OnInit {
- 
   public cardItems: CardItem[];
   public url: string;
   @Input() items: InnerContent[];
   constructor() {
     this.cardItems = [];
-   }
+  }
 
   ngOnInit(): void {
     this.cardItems.push({
       style: ['First Dance', 'Parent & Child Dance'],
-      imageUrl: '../../../assets/images/service1.jpg'
+      imageUrl: '../../../assets/images/service1.jpg',
     } as CardItem);
     this.cardItems.push({
       style: ['Groomsmen Dance', 'Parent Dance', 'Children’s Dance'],
-      imageUrl: '../../../assets/images/service2.jpg'
+      imageUrl: '../../../assets/images/service2.jpg',
     } as CardItem);
     this.cardItems.push({
       style: ['Bridal Party Dance', 'Anniversary Dance'],
-      imageUrl: '../../../assets/images/service3.jpg'
-    } as CardItem)
+      imageUrl: '../../../assets/images/service3.jpg',
+    } as CardItem);
 
-    this.items.forEach( (item, index) => {
+    this.items.forEach((item, index) => {
       const cardItem = this.cardItems[index];
       if (cardItem) {
         cardItem._id = item._id;
         cardItem.title = item.title;
         cardItem.url = item.url;
       }
-    })
+    });
   }
 
-  handleClick(cardItem: CardItem, event: Event){
-    // debugger;
-    if(cardItem) {
+  handleClick(cardItem: CardItem, event: Event) {
+    if (cardItem) {
       location.href = cardItem.url;
     }
   }
