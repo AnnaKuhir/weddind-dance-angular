@@ -10,6 +10,7 @@ import { ServicesModule } from './services/services.module';
 import { FooterComponent } from './footer/footer.component';
 import { OffersModule } from './offers/offers.module';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { CoachesModule } from './coaches/coaches.module';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     ServicesModule,
     OffersModule,
     AngularSvgIconModule.forRoot(),
+    CoachesModule
   ],
   providers: [],
   bootstrap: [AppComponent]  //запуск компонента 

@@ -16,6 +16,10 @@ export class InnerContent {
     _id: string;
     title: string;
     url: string;
+    name: string;
+    direction: string;
+    workExperience: string;
+    teachExperience: string;
 }
 
 export class Content {

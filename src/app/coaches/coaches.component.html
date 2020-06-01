@@ -1,0 +1,13 @@
+<div class="container">
+  <section class="coaches" id="coaches" *ngIf="content">
+    <h2 class="coaches__title">
+      {{ content.meta.title }}
+    </h2>
+    <p class="coaches__description">
+      {{ content.meta.description }}
+    </p>
+    <div class="coaches__slider">
+      <app-coaches-item *ngFor="let item of items; let i = index" [index]="i" [item]='item'></app-coaches-item>
+    </div>
+  </section>
+</div>
