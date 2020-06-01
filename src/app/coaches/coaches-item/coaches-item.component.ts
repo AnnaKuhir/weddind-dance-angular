@@ -14,6 +14,7 @@ export class CoachesItemComponent implements OnInit {
 
   public imgUrl: string;
   public itemIndex: string;
+  public styles: string;
 
   ngOnInit(): void {
     if(this.item) {
@@ -25,6 +26,7 @@ export class CoachesItemComponent implements OnInit {
       } else {
         this.itemIndex = `${this.index}`
       }
+      this.styles = this.item.style.join(', ')
     }
   }
 
