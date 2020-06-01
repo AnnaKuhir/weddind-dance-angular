@@ -6,6 +6,8 @@
         <p class="services__description">
             {{content.meta.description}}
         </p>
-        <app-item [items]='items'></app-item>
+        <div class="services__slider">
+            <app-item *ngFor="let item of items" [item]='item'></app-item>
+        </div>
     </section>
 </div>

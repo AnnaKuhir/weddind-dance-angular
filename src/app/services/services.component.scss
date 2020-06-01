@@ -1,4 +1,12 @@
 .services{
+
+  .services__slider {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+  
   .services__title {
     font-style: normal;
     font-weight: bold;

@@ -1,19 +1,8 @@
-<div class="services__slider">
-  <div class="services__card" *ngFor="let cardItem of cardItems" (click)="handleClick(cardItem, $event)">
-
-    <img [src]="cardItem.imageUrl" class="services__image" alt="First dance image">
-
-
-    <div class="services__info" >
-      <h3 class="services__subtitle">
-        {{cardItem.title}}
-      </h3>
-      <ul class="services__list">
-        <li class="services__items" *ngFor="let list of cardItem.style">
-          {{list}}
-        </li>
-      </ul>
-    </div>
+<div class="services__card" (click)="handleClick()">
+  <img [src]="imgUrl" class="services__image" alt="Dance image">
+  <div class="services__info">
+    <h3 class="services__subtitle">
+      {{item.title}}
+    </h3>
   </div>
-
 </div>

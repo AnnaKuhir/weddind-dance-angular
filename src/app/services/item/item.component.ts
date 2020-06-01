@@ -8,48 +8,21 @@ import { strict } from 'assert';
   styleUrls: ['./item.component.scss'],
 })
 export class ItemComponent implements OnInit {
-  public cardItems: CardItem[];
-  public url: string;
-  @Input() items: InnerContent[];
-  constructor() {
-    this.cardItems = [];
-  }
+  
+  public imgUrl: string;
+  @Input() item: InnerContent;
+  constructor() { }
 
-  ngOnInit(): void {
-    this.cardItems.push({
-      style: ['First Dance', 'Parent & Child Dance'],
-      imageUrl: '../../../assets/images/service1.jpg',
-    } as CardItem);
-    this.cardItems.push({
-      style: ['Groomsmen Dance', 'Parent Dance', 'Children’s Dance'],
-      imageUrl: '../../../assets/images/service2.jpg',
-    } as CardItem);
-    this.cardItems.push({
-      style: ['Bridal Party Dance', 'Anniversary Dance'],
-      imageUrl: '../../../assets/images/service3.jpg',
-    } as CardItem);
-
-    this.items.forEach((item, index) => {
-      const cardItem = this.cardItems[index];
-      if (cardItem) {
-        cardItem._id = item._id;
-        cardItem.title = item.title;
-        cardItem.url = item.url;
-      }
-    });
-  }
-
-  handleClick(cardItem: CardItem, event: Event) {
-    if (cardItem) {
-      location.href = cardItem.url;
+  ngOnInit(): void { 
+    if(this.item) {
+      const imageName = this.item.title.replace(/[ ,.]/g, "-").toLocaleLowerCase();
+      this.imgUrl = `../../../assets/images/${imageName}.jpg`;
     }
   }
-}
 
-interface CardItem {
-  style: any[];
-  _id: string;
-  title: string;
-  url: string;
-  imageUrl: string;
+  handleClick() {
+    if (this.item) {
+      location.href = this.item.url;
+    }
+  }
 }
