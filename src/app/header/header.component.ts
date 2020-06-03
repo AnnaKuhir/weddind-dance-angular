@@ -34,7 +34,6 @@ export class HeaderComponent implements OnInit {
       });
 
     dialogRef.afterClosed().subscribe(result => {
-      debugger;
       console.log(`Dialog result: ${result}`);
     });
   }

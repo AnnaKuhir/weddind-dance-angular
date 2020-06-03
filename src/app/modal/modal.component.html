@@ -1,1 +1,12 @@
-<p>hghgghfhgfhgfhgff</p>
+<form action="" class="form form-test" [formGroup]="form" (ngSubmit)="submit()">
+  <div class="form__control">
+    <input type="email" class="form-input" placeholder="login" formControlName="email" autocomplete="current-email">
+  </div>
+  <div class="form__control">
+    <input type="password" class="form-input" placeholder="password" formControlName="password"
+      autocomplete="current-password">
+  </div>
+  <button type="submit">Submit</button>
+  <!-- <button type="button">Cancel</button> -->
+  <button type="button" mat-button [mat-dialog-close]="true">Cancel</button>
+</form>

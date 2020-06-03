@@ -15,6 +15,7 @@ import { ModalModule } from './modal/modal.module';
 import { ModalComponent } from './modal/modal.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     CoachesModule,
     ModalModule,
     NoopAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   entryComponents: [
     ModalComponent
