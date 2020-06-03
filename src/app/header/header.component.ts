@@ -1,6 +1,8 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Section, Content, InnerContent } from '../models/section.model';
 import { AppService } from '../service/app-service';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component(
   {
@@ -14,7 +16,7 @@ export class HeaderComponent implements OnInit {
   @Output() links: InnerContent [];
   public content: Content;
 
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService, public dialog: MatDialog) { }
   ngOnInit(): void {
     this.appService.getSection().subscribe((sections: Section) => {
       if (sections) {
@@ -22,6 +24,19 @@ export class HeaderComponent implements OnInit {
         this.links = this.content.content;
       }
     });
-
   }
-}
+
+  onStartBtnClick():void{
+   
+    const dialogRef = this.dialog.open(ModalComponent, {
+        height: '400px',
+        width: '600px',
+      });
+
+    dialogRef.afterClosed().subscribe(result => {
+      debugger;
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  }
+

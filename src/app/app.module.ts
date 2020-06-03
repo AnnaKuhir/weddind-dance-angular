@@ -11,12 +11,16 @@ import { FooterComponent } from './footer/footer.component';
 import { OffersModule } from './offers/offers.module';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { CoachesModule } from './coaches/coaches.module';
-
+import { ModalModule } from './modal/modal.module';
+import { ModalComponent } from './modal/modal.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,13 @@ import { CoachesModule } from './coaches/coaches.module';
     ServicesModule,
     OffersModule,
     AngularSvgIconModule.forRoot(),
-    CoachesModule
+    CoachesModule,
+    ModalModule,
+    NoopAnimationsModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    ModalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]  //запуск компонента 

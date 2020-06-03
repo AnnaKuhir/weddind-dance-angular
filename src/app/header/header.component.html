@@ -4,7 +4,7 @@
       <a href="#" class="header__logo">{{ content.meta.title }}</a>
      <div class="header__navigation">
       <app-navigation [links]="links"></app-navigation>
-      <button class="btn btn-active header__btn" type="button">{{ content.action.title }}</button>
+      <button class="btn btn-active header__btn" type="button" (click)="onStartBtnClick()">{{ content.action.title }}</button>
      </div>
     </div>
   </div>
