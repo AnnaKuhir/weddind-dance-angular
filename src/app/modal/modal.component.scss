@@ -1,5 +1,5 @@
-.modal{
-  &_title{
+.modal {
+  &_title {
     text-align: center;
     text-transform: uppercase;
     line-height: 1;
@@ -7,67 +7,78 @@
     margin-bottom: 40px;
   }
 
-  &_form{
-    padding: 20px;
+  &_form {
+    padding: 10px;
     border: none;
   }
 
-  &_controlsContainer{
+  &_controlsContainer {
     margin-bottom: 30px;
   }
 
-  &_control{
+  &_control {
     padding: 10px 0;
   }
 
-  .form-input{
+  .form-input {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 1.5px solid #000;
 
-    &:focus{
+    &:focus {
       outline: none;
-    }
-    .ng-invalid{
-      border: 1.5px solid #f00;
     }
   }
 
-  &_btnContainer{
+  .form-input.ng-invalid {
+    border: 1.5px solid rgb(207, 49, 49);
+  }
+
+  .form-input.ng-valid {
+    border: 1.5px solid rgb(103, 212, 114);
+  }
+
+  .control-label.required:after {
+    color: red;
+    content: "*";
+  }
+
+  &_btnContainer {
     display: flex;
     justify-content: flex-end;
     padding: 20px 0;
   }
 
-  &_btn{
+  &_btn {
     padding: 6px 15px;
     border-radius: 5px;
     margin: 0 5px;
     color: #fff;
   }
 
-  .btn-submit{
+  .btn-submit {
     border: 1.5px solid rgb(103, 212, 114);
     background: rgb(103, 212, 114);
 
-    &:hover{
+    &:active {
       border: 1.5px solid rgb(75, 138, 81);
       background: rgb(75, 138, 81);
     }
   }
 
-  .btn-cancel{
+  .btn-submit:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .btn-cancel {
     border: 1.5px solid rgb(207, 49, 49);
     background: rgb(207, 49, 49);
 
-    &:hover{
-    border: 1.5px solid rgb(156, 37, 37);
-    background: rgb(156, 37, 37);
+    &:active {
+      border: 1.5px solid rgb(156, 37, 37);
+      background: rgb(156, 37, 37);
     }
   }
-
-
- 
-
 }

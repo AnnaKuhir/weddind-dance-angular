@@ -16,7 +16,7 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {
     this.form = new FormGroup({
       email: new FormControl('', Validators.compose([Validators.email, Validators.required])),
-      password: new FormControl('', Validators.compose([Validators.required, Validators.minLength(8)])),
+      password: new FormControl('', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(20)])),
     }); 
   }
 
