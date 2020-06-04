@@ -4,11 +4,19 @@
 <ng-container *ngIf="!loading">
   
     <div class="wrapper">
-        <app-header></app-header>
-        <app-banner></app-banner>
-        <app-services></app-services>
-        <app-offers></app-offers>
-        <app-coaches></app-coaches>
-        <app-footer></app-footer>
+            <app-header></app-header>
+        <div class="section-wrapper">
+            <app-banner></app-banner>
+        </div>
+        <div class="section-wrapper">
+            <app-services></app-services>
+        </div>
+        <div class="section-wrapper">
+            <app-offers></app-offers>
+        </div>
+        <div class="section-wrapper">
+            <app-coaches></app-coaches>
+        </div>
+            <app-footer></app-footer>
     </div>
 </ng-container>
