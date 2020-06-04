@@ -1,0 +1,36 @@
+.modal{
+  &_title{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  &_form{
+    padding: 20px;
+    border: none;
+  }
+
+  &_control{
+    padding: 10px 0;
+  }
+
+  .form-input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1.5px solid #000;
+
+    &:focus{
+      outline: none;
+    }
+    .ng-invalid{
+      border: 1.5px solid #f00;
+    }
+  }
+
+
+ 
+
+}
