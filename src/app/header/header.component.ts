@@ -4,19 +4,16 @@ import { AppService } from '../service/app-service';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
 
-@Component(
-  {
-    selector: 'app-header',
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss']
-  }
-)
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
+})
 export class HeaderComponent implements OnInit {
-
-  @Output() links: InnerContent [];
+  @Output() links: InnerContent[];
   public content: Content;
 
-  constructor(private appService: AppService, public dialog: MatDialog) { }
+  constructor(private appService: AppService, public dialog: MatDialog) {}
   ngOnInit(): void {
     this.appService.getSection().subscribe((sections: Section) => {
       if (sections) {
@@ -26,16 +23,10 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  onStartBtnClick():void{
-   
-    const dialogRef = this.dialog.open(ModalComponent, {
-        height: '400px',
-        width: '600px',
-      });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+  onStartBtnClick(): void {
+    this.dialog.open(ModalComponent, {
+      height: '400px',
+      width: '600px',
     });
   }
-  }
-
+}
