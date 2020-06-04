@@ -12,6 +12,10 @@
     border: none;
   }
 
+  &_controlsContainer{
+    margin-bottom: 30px;
+  }
+
   &_control{
     padding: 10px 0;
   }
@@ -27,6 +31,39 @@
     }
     .ng-invalid{
       border: 1.5px solid #f00;
+    }
+  }
+
+  &_btnContainer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+  }
+
+  &_btn{
+    padding: 6px 15px;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: #fff;
+  }
+
+  .btn-submit{
+    border: 1.5px solid rgb(103, 212, 114);
+    background: rgb(103, 212, 114);
+
+    &:hover{
+      border: 1.5px solid rgb(75, 138, 81);
+      background: rgb(75, 138, 81);
+    }
+  }
+
+  .btn-cancel{
+    border: 1.5px solid rgb(207, 49, 49);
+    background: rgb(207, 49, 49);
+
+    &:hover{
+    border: 1.5px solid rgb(156, 37, 37);
+    background: rgb(156, 37, 37);
     }
   }
 
