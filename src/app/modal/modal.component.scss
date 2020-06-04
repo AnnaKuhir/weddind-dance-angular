@@ -41,7 +41,9 @@
 
   .control-label.required:after {
     color: red;
-    content: "*";
+    content: "\274B";
+    font-size: 10px;
+    position: absolute;
   }
 
   &_btnContainer {
