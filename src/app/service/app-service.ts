@@ -27,7 +27,6 @@ export class AppService {
   }
 
   public updataSection(content: Content): Observable<any> {
-    debugger
     const body = JSON.stringify(content);
     const token = this.getToken();
     let headers = new HttpHeaders().set(

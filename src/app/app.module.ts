@@ -13,17 +13,17 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { CoachesModule } from './coaches/coaches.module';
 import { ModalModule } from './modal/modal.module';
 import { ModalComponent } from './modal/modal.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  NoopAnimationsModule,
+  BrowserAnimationsModule,
+} from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EditModalComponent } from './edit-modal/edit-modal.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-    EditModalComponent,
-  ],
+  declarations: [AppComponent, FooterComponent, EditModalComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -38,12 +38,16 @@ import { EditModalComponent } from './edit-modal/edit-modal.component';
     NoopAnimationsModule,
     MatDialogModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot({
+      timeOut: 1000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }),
+    BrowserAnimationsModule,
   ],
-  entryComponents: [
-    ModalComponent
-  ],
+  entryComponents: [ModalComponent],
   providers: [],
-  bootstrap: [AppComponent]  //запуск компонента 
+  bootstrap: [AppComponent], //запуск компонента
 })
-export class AppModule { }
+export class AppModule {}

@@ -4,6 +4,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AppService } from '../service/app-service';
 import { ModalComponent } from '../modal/modal.component';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-edit-modal',
@@ -16,11 +17,11 @@ export class EditModalComponent implements OnInit {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: Content,
     private appService: AppService,
-    private dialigRef:MatDialogRef<ModalComponent>
+    private dialigRef:MatDialogRef<ModalComponent>,
+    private toastr: ToastrService,
   ) {}
 
   ngOnInit(): void {
-    debugger;
     this.form = new FormGroup({
       logotype: new FormControl(
         this.data.meta.title,
@@ -37,8 +38,11 @@ export class EditModalComponent implements OnInit {
     ))
   }
 
+  showSuccess() {
+    this.toastr.success('Hello world!', 'Toastr fun!');
+  }
+
   save(): void {
-    debugger;
     this.data.meta.title = this.form.controls.logotype.value;
     this.data.action.title = this.form.controls.button.value;
     this.data.content.forEach(link => {
@@ -46,6 +50,7 @@ export class EditModalComponent implements OnInit {
     })
     this.appService.updataSection(this.data).subscribe((result) => {
       this.dialigRef.close();
+      this.showSuccess();
     });
   }
 }
