@@ -7,5 +7,6 @@
       <button class="btn btn-active header__btn" type="button" (click)="onStartBtnClick()">{{ content.action.title }}</button>
      </div>
     </div>
+    <app-edit *ngIf="isTokenExist()" [content]="content"></app-edit>
   </div>
 </header>

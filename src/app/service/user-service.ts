@@ -23,4 +23,13 @@ export class UserService {
       `${this.baseUrl}/app/api/v1/user/login`, body, { headers: headers, responseType: 'json' }
     );
   }
+
+  public isTokenExist():boolean{
+    const data = localStorage.getItem('user-token');
+    const result = JSON.parse(data) as UserToken;
+    if(result && result.access_token ){
+      return true;
+    }
+    return false;
+  }
 }

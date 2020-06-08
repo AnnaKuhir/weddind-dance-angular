@@ -16,12 +16,13 @@ import { ModalComponent } from './modal/modal.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { EditModalComponent } from './edit-modal/edit-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    
+    EditModalComponent,
   ],
   imports: [
     BrowserModule,

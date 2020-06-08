@@ -1,0 +1,20 @@
+<!-- <div class="edit-container" *ngIf="data">
+  <p>{{ data.meta.title }}</p>
+  <div class="edit-list" *ngFor="let link of data.content">
+    <p>{{ link.title }}</p>
+  </div>
+  <p class="edit-btn"> {{ data.action.title }}</p>
+</div> -->
+
+<div class="edit-container">
+  <h1 class="edit_title">Editing</h1>
+  <form action="" class="edit_form" [formGroup]="form" (ngSubmit)="save()">
+    <input type="text" formControlName="logotype">
+
+    <input *ngFor="let link of data.content" type="text" formControlName={{link._id}}>
+
+    <input type="text" formControlName="button">
+    
+    <button type="submit">Save</button>
+  </form>
+</div>

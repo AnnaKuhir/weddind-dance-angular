@@ -3,6 +3,8 @@ import { Section, Content, InnerContent } from '../models/section.model';
 import { AppService } from '../service/app-service';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
+import { UserService } from '../service/user-service';
+import { EditModalComponent } from '../edit-modal/edit-modal.component';
 
 @Component({
   selector: 'app-header',
@@ -11,9 +13,9 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class HeaderComponent implements OnInit {
   @Output() links: InnerContent[];
-  public content: Content;
+  @Output() content: Content;
 
-  constructor(private appService: AppService, public dialog: MatDialog) {}
+  constructor(private appService: AppService, public dialog: MatDialog, private userService: UserService) {}
   ngOnInit(): void {
     this.appService.getSection().subscribe((sections: Section) => {
       if (sections) {
@@ -28,5 +30,12 @@ export class HeaderComponent implements OnInit {
       height: '400px',
       width: '600px',
     });
+  }
+
+
+
+  
+  public isTokenExist():boolean{
+    return this.userService.isTokenExist()
   }
 }
