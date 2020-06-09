@@ -39,7 +39,7 @@ export class EditModalComponent implements OnInit {
   }
 
   showSuccess() {
-    this.toastr.success('Hello world!', 'Toastr fun!');
+    this.toastr.success('Successfully applied!', 'Editing');
   }
 
   save(): void {

@@ -40,7 +40,7 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     FormsModule,
     ToastrModule.forRoot({
-      timeOut: 1000,
+      timeOut: 2000,
       positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),

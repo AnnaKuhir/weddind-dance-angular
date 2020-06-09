@@ -7,14 +7,19 @@
 </div> -->
 
 <div class="edit-container">
-  <h1 class="edit_title">Editing</h1>
-  <form action="" class="edit_form" [formGroup]="form" (ngSubmit)="save()">
-    <input type="text" formControlName="logotype">
+  <h1 class="edit-title">Editing</h1>
+  <form action="" class="edit-form" [formGroup]="form" (ngSubmit)="save()">
+    <div class="input-container">
+      <input class="edit-control" type="text" formControlName="logotype">
 
-    <input *ngFor="let link of data.content" type="text" formControlName={{link._id}}>
-
-    <input type="text" formControlName="button">
+      <input class="edit-control"  *ngFor="let link of data.content" type="text" formControlName={{link._id}}>
+  
+      <input class="edit-control" type="text" formControlName="button">
+    </div>
     
-    <button type="submit">Save</button>
+    <div class="btns-container">
+      <button class="btn btn-submit" type="submit" [disabled]="!form.valid">Save</button>
+      <button class="btn btn-cancel" type="button" mat-button [mat-dialog-close]="true">Cancel</button>
+    </div>
   </form>
 </div>
