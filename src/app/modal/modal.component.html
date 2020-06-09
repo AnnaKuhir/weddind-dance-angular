@@ -1,20 +1,21 @@
 <div class="modal">
   <h1 class="modal_title">Authorization</h1>
-<form action="" class="modal_form form-test" [formGroup]="form" (ngSubmit)="submit()">
-<div class="modal_controlsContainer">
-  <div class="modal_control">
-    <label for="login" class="control-label required">Enter your login</label>
-    <input type="email" id="login" class="form-input" placeholder="somename@gmail.com" formControlName="email" autocomplete="current-email">
-  </div>
-  <div class="modal_control">
-    <label for="password" class="control-label required">Enter your password</label>
-    <input type="password" id="password" class="form-input" placeholder="At least 8 characters" formControlName="password"
-      autocomplete="current-password">
-  </div>
-</div>
-<div class="modal_btnContainer">
-  <button class="btn modal_btn btn-submit" type="submit" [disabled]="!form.valid">Submit</button>
-  <button class="btn modal_btn btn-cancel" type="button" mat-button [mat-dialog-close]="true">Cancel</button>
-</div>
-</form>
+  <form action="" class="modal_form form-test" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="modal_controlsContainer">
+      <div class="modal_control">
+        <label for="login" class="control-label required">Enter your login</label>
+        <input type="email" id="login" class="form-input" placeholder="somename@gmail.com" formControlName="email"
+          autocomplete="current-email">
+      </div>
+      <div class="modal_control">
+        <label for="password" class="control-label required">Enter your password</label>
+        <input type="password" id="password" class="form-input" placeholder="At least 8 characters"
+          formControlName="password" autocomplete="current-password">
+      </div>
+    </div>
+    <div class="modal_btnContainer">
+      <button class="btn modal_btn btn-submit" type="submit" [disabled]="!form.valid">Submit</button>
+      <button class="btn modal_btn btn-cancel" type="button" mat-button [mat-dialog-close]="true">Cancel</button>
+    </div>
+  </form>
 </div>

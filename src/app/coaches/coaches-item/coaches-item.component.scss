@@ -70,17 +70,16 @@ span {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  border: 2px solid #FF699F;
-  color: #FF699F;
+  border: 2px solid #ff699f;
+  color: #ff699f;
   border-radius: 3px;
   padding: 11px 40px 10px;
   background-color: #fff;
 
   &:hover {
-    background-color: #FF699F;
+    background-color: #ff699f;
     color: #fff;
     transition: 0.5s;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-      0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 }

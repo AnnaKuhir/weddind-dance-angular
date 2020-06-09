@@ -4,21 +4,14 @@ import { ModalComponent } from './modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 
-
-
-
 @NgModule({
-  declarations: [
-    ModalComponent
-  ],
+  declarations: [ModalComponent],
   imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
+    CommonModule, 
+    FormsModule, 
+    ReactiveFormsModule, 
     MatDialogModule
   ],
-  exports:[
-    ModalComponent
-  ]
+  exports: [ModalComponent],
 })
-export class ModalModule { }
+export class ModalModule {}

@@ -1,22 +1,14 @@
-<!-- <div class="edit-container" *ngIf="data">
-  <p>{{ data.meta.title }}</p>
-  <div class="edit-list" *ngFor="let link of data.content">
-    <p>{{ link.title }}</p>
-  </div>
-  <p class="edit-btn"> {{ data.action.title }}</p>
-</div> -->
-
 <div class="edit-container">
   <h1 class="edit-title">Editing</h1>
   <form action="" class="edit-form" [formGroup]="form" (ngSubmit)="save()">
     <div class="input-container">
       <input class="edit-control" type="text" formControlName="logotype">
 
-      <input class="edit-control"  *ngFor="let link of data.content" type="text" formControlName={{link._id}}>
-  
+      <input class="edit-control" *ngFor="let link of data.content" type="text" formControlName={{link._id}}>
+
       <input class="edit-control" type="text" formControlName="button">
     </div>
-    
+
     <div class="btns-container">
       <button class="btn btn-submit" type="submit" [disabled]="!form.valid">Save</button>
       <button class="btn btn-cancel" type="button" mat-button [mat-dialog-close]="true">Cancel</button>

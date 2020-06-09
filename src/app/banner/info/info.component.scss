@@ -1,32 +1,31 @@
 .banner__text {
-    max-width: 428px;
-    min-height: 677px;
-    padding: 73px 77px 80px 0;
-    position: absolute;
-    background: #fff;
+  max-width: 428px;
+  min-height: 677px;
+  padding: 73px 77px 80px 0;
+  position: absolute;
+  background: #fff;
 
-    .banner__title {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 72px;
-        color: #000;
-        margin-bottom: 16px;
-        line-height: 1;
-    }
+  .banner__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    color: #000;
+    margin-bottom: 16px;
+    line-height: 1;
+  }
 
-    span {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-    }
+  span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+  }
 
-    .banner__info {
-        font-family: Montserrat-Normal;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        margin: 40px 0;
-        line-height: 1.5;
-    }
-
+  .banner__info {
+    font-family: Montserrat-Normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 40px 0;
+    line-height: 1.5;
+  }
 }

@@ -4,10 +4,9 @@ import { InnerContent } from 'src/app/models/section.model';
 @Component({
   selector: 'app-coaches-item',
   templateUrl: './coaches-item.component.html',
-  styleUrls: ['./coaches-item.component.scss']
+  styleUrls: ['./coaches-item.component.scss'],
 })
 export class CoachesItemComponent implements OnInit {
-
   @Input() item: InnerContent;
   @Input() index: number;
   constructor() {}
@@ -17,16 +16,18 @@ export class CoachesItemComponent implements OnInit {
   public styles: string;
 
   ngOnInit(): void {
-    if(this.item) {
-      const imageName = this.item.name.replace(/[ ,.]/g, "-").toLocaleLowerCase();
+    if (this.item) {
+      const imageName = this.item.name
+        .replace(/[ ,.]/g, '-')
+        .toLocaleLowerCase();
       this.imgUrl = `../../../assets/images/${imageName}.jpg`;
       this.index++;
-      if(this.index < 10){
-       this.itemIndex = `0${this.index}`
+      if (this.index < 10) {
+        this.itemIndex = `0${this.index}`;
       } else {
-        this.itemIndex = `${this.index}`
+        this.itemIndex = `${this.index}`;
       }
-      this.styles = this.item.style.join(', ')
+      this.styles = this.item.style.join(', ');
     }
   }
 
@@ -35,5 +36,4 @@ export class CoachesItemComponent implements OnInit {
       location.href = this.item.url;
     }
   }
-
 }

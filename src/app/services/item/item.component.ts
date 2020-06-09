@@ -8,14 +8,15 @@ import { strict } from 'assert';
   styleUrls: ['./item.component.scss'],
 })
 export class ItemComponent implements OnInit {
-  
   public imgUrl: string;
   @Input() item: InnerContent;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void { 
-    if(this.item) {
-      const imageName = this.item.title.replace(/[ ,.]/g, "-").toLocaleLowerCase();
+  ngOnInit(): void {
+    if (this.item) {
+      const imageName = this.item.title
+        .replace(/[ ,.]/g, '-')
+        .toLocaleLowerCase();
       this.imgUrl = `../../../assets/images/${imageName}.jpg`;
     }
   }

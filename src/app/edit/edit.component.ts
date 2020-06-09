@@ -9,9 +9,8 @@ import { Content } from '../models/section.model';
   styleUrls: ['./edit.component.scss'],
 })
 export class EditComponent implements OnInit {
-
   @Input() content: Content;
-  
+
   constructor(public dialog: MatDialog) {}
   onEditBtnClick(): void {
     this.dialog.open(EditModalComponent, {

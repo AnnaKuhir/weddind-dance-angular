@@ -20,7 +20,7 @@ export class AppService {
 
   public getToken(): string {
     const token = localStorage.getItem('user-token');
-    if (token){
+    if (token) {
       const result = JSON.parse(token) as UserToken;
       return result.access_token;
     }
@@ -33,8 +33,8 @@ export class AppService {
       'Content-Type',
       'application/json; charset=utf-8'
     );
-    if(token){
-      headers = headers.set("Authorization", "Bearer " + token);
+    if (token) {
+      headers = headers.set('Authorization', 'Bearer ' + token);
     }
     return this.httpClient.put(
       `${this.baseUrl}/app/api/v1/section/navigation`,

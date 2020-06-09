@@ -13,8 +13,10 @@ export class OffersItemComponent implements OnInit {
   public imgUrl: string;
 
   ngOnInit(): void {
-    if(this.item) {
-      const imageName = this.item.title.replace(/[ ,.]/g, "-").toLocaleLowerCase();
+    if (this.item) {
+      const imageName = this.item.title
+        .replace(/[ ,.]/g, '-')
+        .toLocaleLowerCase();
       this.imgUrl = `../../../assets/images/${imageName}.svg`;
     }
   }

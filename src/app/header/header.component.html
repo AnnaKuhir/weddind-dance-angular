@@ -2,10 +2,11 @@
   <div class="container">
     <div class="header__body">
       <a href="#" class="header__logo">{{ content.meta.title }}</a>
-     <div class="header__navigation">
-      <app-navigation [links]="links"></app-navigation>
-      <button class="btn btn-active header__btn" type="button" (click)="onStartBtnClick()">{{ content.action.title }}</button>
-     </div>
+      <div class="header__navigation">
+        <app-navigation [links]="links"></app-navigation>
+        <button class="btn btn-active header__btn" type="button"
+          (click)="onStartBtnClick()">{{ content.action.title }}</button>
+      </div>
     </div>
     <app-edit *ngIf="isTokenExist()" [content]="content"></app-edit>
   </div>

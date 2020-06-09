@@ -20,14 +20,16 @@ export class UserService {
       'application/json; charset=utf-8'
     );
     return this.httpClient.post<UserToken>(
-      `${this.baseUrl}/app/api/v1/user/login`, body, { headers: headers, responseType: 'json' }
+      `${this.baseUrl}/app/api/v1/user/login`,
+      body,
+      { headers: headers, responseType: 'json' }
     );
   }
 
-  public isTokenExist():boolean{
+  public isTokenExist(): boolean {
     const data = localStorage.getItem('user-token');
     const result = JSON.parse(data) as UserToken;
-    if(result && result.access_token ){
+    if (result && result.access_token) {
       return true;
     }
     return false;
