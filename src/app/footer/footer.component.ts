@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Content, Section } from '../models/section.model';
 import { AppService } from '../service/app-service';
+import { SectionNumber } from '../enum/enum';
 
 @Component({
   selector: 'app-footer',
@@ -15,7 +16,7 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     this.appService.getSection().subscribe((sections: Section) => {
       if (sections) {
-        this.content = sections.content[4];
+        this.content = sections.content[SectionNumber.header];
       }
     });
 

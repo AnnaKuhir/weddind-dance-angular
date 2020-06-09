@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Section, Content } from '../models/section.model';
 import { AppService } from '../service/app-service';
+import { SectionNumber } from '../enum/enum';
 
 @Component(
   {
@@ -17,7 +18,7 @@ export class BannerComponent implements OnInit{
   ngOnInit(): void {
     this.appService.getSection().subscribe((sections: Section) => {
       if (sections) {
-        this.content = sections.content[5];
+        this.content = sections.content[SectionNumber.banner];
       }
     });
 

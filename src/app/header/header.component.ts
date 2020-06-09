@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
 import { UserService } from '../service/user-service';
 import { EditModalComponent } from '../edit-modal/edit-modal.component';
+import { SectionNumber } from '../enum/enum';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +20,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.appService.getSection().subscribe((sections: Section) => {
       if (sections) {
-        this.content = sections.content[4];
+        this.content = sections.content[SectionNumber.header];
         this.links = this.content.content;
       }
     });
